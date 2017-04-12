@@ -25,7 +25,7 @@ artifacts:
   name: YellowDrawer.Data.Common
   
 install:
-  - nuget restore YellowDrawer.Storage.sln
+  - nuget restore YellowDrawer.Data.sln
 
 deploy:
 - provider: NuGet
