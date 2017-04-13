@@ -43,9 +43,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -56,13 +54,13 @@
     <Compile Include="SoftDeletion\LambdaExtension.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YellowDrawer.Data.Common\YellowDrawer.Data.Common.csproj">
-      <Project>{b967c7c2-54db-4dc5-a8d6-8589785be284}</Project>
-      <Name>YellowDrawer.Data.Common</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\YellowDrawer.Data.Common\YellowDrawer.Data.Common.Net35.csproj">
+      <Project>{be852c29-acb6-44ec-83b1-d9de6ae69e95}</Project>
+      <Name>YellowDrawer.Data.Common.Net35</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

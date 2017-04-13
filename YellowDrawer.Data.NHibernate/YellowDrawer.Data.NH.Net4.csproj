@@ -56,13 +56,13 @@
     <Compile Include="SoftDeletion\LambdaExtension.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YellowDrawer.Data.Common\YellowDrawer.Data.Common.csproj">
-      <Project>{b967c7c2-54db-4dc5-a8d6-8589785be284}</Project>
-      <Name>YellowDrawer.Data.Common</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\YellowDrawer.Data.Common\YellowDrawer.Data.Common.Net4.csproj">
+      <Project>{f5beab72-c8d8-4720-862a-bfc61aa4d910}</Project>
+      <Name>YellowDrawer.Data.Common.Net4</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
