@@ -15,7 +15,6 @@
 	</dependencies>
   </metadata>
 	<files>
-		<file src="bin\Debug\net35\YellowDrawer.Data.EF.dll" target="lib\net35" />
 		<file src="bin\Debug\net4\YellowDrawer.Data.EF.dll" target="lib\net40" />		
 		<file src="bin\Debug\net45\YellowDrawer.Data.EF.dll" target="lib\net45" />
 	</files>
