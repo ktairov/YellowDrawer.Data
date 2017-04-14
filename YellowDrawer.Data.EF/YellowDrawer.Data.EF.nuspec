@@ -10,7 +10,6 @@
     <description>NET library for work with EntityFramework repository</description>
     <copyright>Copyright 2017</copyright>
 	<dependencies>
-			<dependency id="YellowDrawer.Data.Common" />
 			<dependency id="EntityFramework" />
 	</dependencies>
   </metadata>
