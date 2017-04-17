@@ -16,5 +16,6 @@
 		<file src="bin\Debug\net35\YellowDrawer.Data.Common.dll" target="lib\net35" />
 		<file src="bin\Debug\net4\YellowDrawer.Data.Common.dll" target="lib\net40" />		
 		<file src="bin\Debug\net45\YellowDrawer.Data.Common.dll" target="lib\net45" />
+		<file src="YellowDrawer.Data.Common.Core\bin\Debug\netcoreapp1.1\YellowDrawer.Data.Common.Core.dll" target="lib\core" />
 	</files>
 </package>

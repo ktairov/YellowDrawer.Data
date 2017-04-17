@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "YellowDrawer.Data.Common", "YellowDrawer.Data.Common", "{7F289475-1977-483F-9B41-FA472F34C56C}"
 EndProject
@@ -26,6 +26,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YellowDrawer.Data.Common.Net35", "YellowDrawer.Data.Common\YellowDrawer.Data.Common.Net35.csproj", "{BE852C29-ACB6-44EC-83B1-D9DE6AE69E95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YellowDrawer.Data.Common.Net4", "YellowDrawer.Data.Common\YellowDrawer.Data.Common.Net4.csproj", "{F5BEAB72-C8D8-4720-862A-BFC61AA4D910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YellowDrawer.Data.Common.Core", "YellowDrawer.Data.Common\YellowDrawer.Data.Common.Core\YellowDrawer.Data.Common.Core.csproj", "{12C4C027-0D21-441E-A6CE-B33598C8FFB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YellowDrawer.Data.EF.Core", "YellowDrawer.Data.EF\YellowDrawer.Data.EF.Core\YellowDrawer.Data.EF.Core.csproj", "{1A76081E-B8D8-4A7E-A221-CBAD29E5E6B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{F5BEAB72-C8D8-4720-862A-BFC61AA4D910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5BEAB72-C8D8-4720-862A-BFC61AA4D910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5BEAB72-C8D8-4720-862A-BFC61AA4D910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C4C027-0D21-441E-A6CE-B33598C8FFB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C4C027-0D21-441E-A6CE-B33598C8FFB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C4C027-0D21-441E-A6CE-B33598C8FFB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C4C027-0D21-441E-A6CE-B33598C8FFB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A76081E-B8D8-4A7E-A221-CBAD29E5E6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A76081E-B8D8-4A7E-A221-CBAD29E5E6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A76081E-B8D8-4A7E-A221-CBAD29E5E6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A76081E-B8D8-4A7E-A221-CBAD29E5E6B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,5 +94,7 @@ Global
 		{49A47FA5-DA19-432D-9EE5-238F41FA6068} = {3E583BB9-A68F-4B72-8DC7-2EB6CCFB28E0}
 		{BE852C29-ACB6-44EC-83B1-D9DE6AE69E95} = {7F289475-1977-483F-9B41-FA472F34C56C}
 		{F5BEAB72-C8D8-4720-862A-BFC61AA4D910} = {7F289475-1977-483F-9B41-FA472F34C56C}
+		{12C4C027-0D21-441E-A6CE-B33598C8FFB6} = {7F289475-1977-483F-9B41-FA472F34C56C}
+		{1A76081E-B8D8-4A7E-A221-CBAD29E5E6B8} = {80027E36-464A-48AB-BB5D-F556F0912808}
 	EndGlobalSection
 EndGlobal
