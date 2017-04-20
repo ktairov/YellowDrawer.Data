@@ -7,18 +7,23 @@ build:
   verbosity: minimal
   
 after_build:
-- nuget pack YellowDrawer.Data.EF\YellowDrawer.Data.EF.nuspec  -Version "%APPVEYOR_BUILD_VERSION%" -OutputDirectory YellowDrawer.Data.EF
-- nuget pack YellowDrawer.Data.NHibernate\YellowDrawer.Data.NH.nuspec  -Version "%APPVEYOR_BUILD_VERSION%" -OutputDirectory YellowDrawer.Data.NHibernate
-- nuget pack YellowDrawer.Data.Common\YellowDrawer.Data.Common.nuspec  -Version "%APPVEYOR_BUILD_VERSION%" -OutputDirectory YellowDrawer.Data.Common
+- nuget pack src\YellowDrawer.Data.EF\YellowDrawer.Data.EF.nuspec  -Version "%APPVEYOR_BUILD_VERSION%" -OutputDirectory src\YellowDrawer.Data.EF
+- nuget pack src\YellowDrawer.Data.NHibernate\YellowDrawer.Data.NH.nuspec  -Version "%APPVEYOR_BUILD_VERSION%" -OutputDirectory src\YellowDrawer.Data.NHibernate
+- nuget pack src\YellowDrawer.Data.Common\YellowDrawer.Data.Common.nuspec  -Version "%APPVEYOR_BUILD_VERSION%" -OutputDirectory src\YellowDrawer.Data.Common
+
+test:
+  categories:
+    except:
+      - Unit
 
 image: Visual Studio 2017
 
 artifacts:
-- path: 'YellowDrawer.Data.EF\*.nupkg'
+- path: 'src\YellowDrawer.Data.EF\*.nupkg'
   name: YellowDrawer.Data.EF
-- path: 'YellowDrawer.Data.NHibernate\*.nupkg'
+- path: 'src\YellowDrawer.Data.NHibernate\*.nupkg'
   name: YellowDrawer.Data.NHibernate
-- path: 'YellowDrawer.Data.Common\*.nupkg'
+- path: 'src\YellowDrawer.Data.Common\*.nupkg'
   name: YellowDrawer.Data.Common
   
 install:

@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Data.Common;
+using System.Data.Entity;
 
 namespace YellowDrawer.Data.Simple
 {
@@ -8,6 +9,8 @@ namespace YellowDrawer.Data.Simple
 
         public EFContext() : base("DefaultConnection")
         {}
+
+        public EFContext(string connectionString) : base(connectionString) { }
 
         public static EFContext Create()
         {

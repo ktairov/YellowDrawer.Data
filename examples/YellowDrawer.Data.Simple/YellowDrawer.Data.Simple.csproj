@@ -76,15 +76,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YellowDrawer.Data.Common\YellowDrawer.Data.Common.csproj">
+    <ProjectReference Include="..\..\src\YellowDrawer.Data.Common\YellowDrawer.Data.Common.csproj">
       <Project>{b967c7c2-54db-4dc5-a8d6-8589785be284}</Project>
       <Name>YellowDrawer.Data.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YellowDrawer.Data.EF\YellowDrawer.Data.EF.csproj">
+    <ProjectReference Include="..\..\src\YellowDrawer.Data.EF\YellowDrawer.Data.EF.csproj">
       <Project>{683cf428-772a-4e4e-8630-90927a9ff6ce}</Project>
       <Name>YellowDrawer.Data.EF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YellowDrawer.Data.NHibernate\YellowDrawer.Data.NH.csproj">
+    <ProjectReference Include="..\..\src\YellowDrawer.Data.NHibernate\YellowDrawer.Data.NH.csproj">
       <Project>{e814461f-ccd8-4f5c-b9c2-c15b3e4b7d22}</Project>
       <Name>YellowDrawer.Data.NH</Name>
     </ProjectReference>
