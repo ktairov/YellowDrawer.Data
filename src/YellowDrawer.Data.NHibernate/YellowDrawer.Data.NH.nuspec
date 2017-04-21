@@ -10,6 +10,8 @@
     <description>NET library for work with NHibernate repository</description>
     <copyright>Copyright 2017</copyright>
 	<dependencies>
+			<dependency id="YellowDrawer.Data.Common" version="1.0"/>
+			<dependency id="NHibernate" version="3.0"/>
 	</dependencies>
   </metadata>
 	<files>
