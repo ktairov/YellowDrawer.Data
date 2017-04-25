@@ -51,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,7 +81,7 @@
       <Project>{b967c7c2-54db-4dc5-a8d6-8589785be284}</Project>
       <Name>YellowDrawer.Data.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\YellowDrawer.Data.EF\YellowDrawer.Data.EF.csproj">
+    <ProjectReference Include="..\..\src\YellowDrawer.Data.EF\YellowDrawer.Data.EF6\YellowDrawer.Data.EF.csproj">
       <Project>{683cf428-772a-4e4e-8630-90927a9ff6ce}</Project>
       <Name>YellowDrawer.Data.EF</Name>
     </ProjectReference>

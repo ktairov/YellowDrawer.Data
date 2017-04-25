@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using YellowDrawer.Data.Common;
+using YellowDrawer.Data.Common.UnitOfWork;
 using YellowDrawer.Data.EF;
 using YellowDrawer.Data.Simple;
 
@@ -10,38 +11,65 @@ namespace YellowDrawer.Data.Test
     public class EFTests
     {
         private IRepository entityFramworkRepository;
+        private IUnitOfWorkProvider provider;
+        private const string NameItem = "SipleEFTest";
 
         [TestInitialize, TestCategory("Unit")]
         public void Initialize()
         {
             entityFramworkRepository = new Repository(new EFContext());
+            provider = new EF.UnitOfWork.UnitOfWorkProvider();
         }
 
         [TestMethod, TestCategory("Unit")]
         public void SuccessCreateItem()
         {
-            entityFramworkRepository.Add(new ExampleTabel() { Name = "SipleTest" });
-            var item = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == "SipleTest").FirstOrDefault();
-            Assert.IsNotNull(item);
-            entityFramworkRepository.DeleteItem(item);
+            using (var unitOfWork = provider.BeginUnitOfWork())
+            {
+                entityFramworkRepository.Add(new ExampleTabel() { Name = NameItem });
+                unitOfWork.Success();
+            }
+            using (var unitOfWork = provider.BeginUnitOfWork())
+            {
+                var item = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == NameItem).FirstOrDefault();
+                Assert.IsNotNull(item);
+                entityFramworkRepository.DeleteItem(item);
+                unitOfWork.Success();
+            }
         }
 
         [TestMethod, TestCategory("Unit")]
         public void SuccessDeleteItem()
         {
-            entityFramworkRepository.Add(new ExampleTabel() { Name = "SipleTest" });
-            var item = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == "SipleTest").FirstOrDefault();
-            entityFramworkRepository.DeleteItem(item);
-            entityFramworkRepository.Update(item);
-            var deletedItem = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == "SipleTest").FirstOrDefault();
-            Assert.IsNull(deletedItem);
+            ExampleTabel item = null;
+            using (var unitOfWork = provider.BeginUnitOfWork())
+            {
+                entityFramworkRepository.Add(new ExampleTabel() { Name = NameItem });
+                item = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == NameItem).FirstOrDefault();
+                unitOfWork.Success();
+            }
+            using (var unitOfWork = provider.BeginUnitOfWork())
+            {
+                entityFramworkRepository.DeleteItem(item);
+                unitOfWork.Success();
+            }
+            using (var unitOfWork = provider.BeginUnitOfWork())
+            {
+                var deletedItem = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == NameItem).FirstOrDefault();
+                Assert.IsNull(deletedItem);
+                unitOfWork.Success();
+            }
         }
 
         [TestMethod, TestCategory("Unit")]
         public void FindNullItem()
         {
-            var item = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == "SipleTestFindNull").FirstOrDefault();
-            Assert.IsNull(item);
+            using (var unitOfWork = provider.BeginUnitOfWork())
+            {
+                var item = entityFramworkRepository.Find<ExampleTabel>(x => x.Name == "SipleTestEFFindNull").FirstOrDefault();
+                Assert.IsNull(item);
+                unitOfWork.Success();
+            }
         }
     }
 }

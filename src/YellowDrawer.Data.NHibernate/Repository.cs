@@ -4,16 +4,16 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 using YellowDrawer.Data.Common;
+using YellowDrawer.Data.NH.UnitOfWork;
 
 namespace YellowDrawer.Data.NH
 {
     public class Repository : IRepository
     {
-        private readonly ISession _sessionProvider;
+        private ISession _sessionProvider { get { return NHibernateSessionContext.CurrentOrNewSession; } }
 
-        public Repository(ISession sessionProvider)
+        public Repository()
         {
-            _sessionProvider = sessionProvider;
         }
 
         public ISession Session
@@ -28,20 +28,12 @@ namespace YellowDrawer.Data.NH
 
         public void DeleteItem<T>(T item) where T : class, IIdentifiable
         {
-            using (var transaction = Session.BeginTransaction())
-            {
                 Session.Delete(item);
-                transaction.Commit();
-            }
         }
 
         public void Delete<T>(object id) where T : class, IIdentifiable
         {
-            using (var transaction = Session.BeginTransaction())
-            {
                 Session.Delete(Session.Load<T>(id));
-                transaction.Commit();
-            }
         }
 
         public T Find<T>(object id) where T : class, IIdentifiable

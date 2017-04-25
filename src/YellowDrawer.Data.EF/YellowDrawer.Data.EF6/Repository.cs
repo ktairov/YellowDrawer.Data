@@ -46,6 +46,7 @@ namespace YellowDrawer.Data.EF
 
         void IRepository.Update<T>(T item)
         {
+            _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

@@ -1,6 +1,10 @@
 .NET SDK for YellowDrawer.Data.
 ===============================
 
+[![Build status](https://ci.appveyor.com/api/projects/status/hrvftvurr85l2lxq?svg=true)](https://ci.appveyor.com/project/AlexeyKharchenko/yellowdrawer-data)
+YellowDrawer.Data.Common [![NuGet](https://img.shields.io/nuget/v/YellowDrawer.Data.Common.svg)](https://www.nuget.org/packages/YellowDrawer.Data.Common/)
+YellowDrawer.Data.EF [![NuGet](https://img.shields.io/nuget/v/YellowDrawer.Data.EF.svg)](https://www.nuget.org/packages/YellowDrawer.Data.EF/)
+YellowDrawer.Data.NF [![NuGet](https://img.shields.io/nuget/v/YellowDrawer.Data.NF.svg)](https://www.nuget.org/packages/YellowDrawer.Data.NF/)
 .NET library for work with EntityFramework and NHibernate repositories
 
  

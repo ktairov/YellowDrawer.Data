@@ -53,6 +53,13 @@
     <Compile Include="Repository.cs" />
     <Compile Include="SoftDeletion\IDeletable.cs" />
     <Compile Include="SoftDeletion\LambdaExtension.cs" />
+    <Compile Include="UnitOfWork\NHibernateSessionContext.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="UnitOfWork\UnitOfWorkContext\BaseUnitOfWorkContext.cs" />
+    <Compile Include="UnitOfWork\UnitOfWorkContext\IUnitOfWorkContext.cs" />
+    <Compile Include="UnitOfWork\UnitOfWorkContext\ThreadStaticUnitOfWorkContext.cs" />
+    <Compile Include="UnitOfWork\UnitOfWorkContext\UnitOfWorkContextInfo.cs" />
+    <Compile Include="UnitOfWork\UnitOfWorkProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YellowDrawer.Data.Common\YellowDrawer.Data.Common.csproj">
