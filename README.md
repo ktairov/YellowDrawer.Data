@@ -1,4 +1,4 @@
-#YellowDrawer.Data
+# YellowDrawer.Data
 
 
 | Build Status | YellowDrawer.Data.Common NuGet| YellowDrawer.Data.EF  NuGet | YellowDrawer.Data.NH  NuGet |
@@ -31,8 +31,8 @@ The latest versions of the required frameworks are automatically installed (Yell
 Add connection string to config file and create DbContext and initialize Repository and UnitOfWorkProvider:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-var entityFramworkRepository = new Repository(new EFContext());
-var entityFramworkProvider = new UnitOfWorkProvider();
+			var entityFramworkRepository = new Repository(new EFContext());
+			var entityFramworkProvider = new UnitOfWorkProvider();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## Initialize NHibernate Repository
@@ -42,7 +42,7 @@ Set `<property name="current_session_context_class">thread_static</property>`
 Set fields to NHibernateSessionContext
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-var cfg = new NHibernate.Cfg.Configuration();
+			var cfg = new NHibernate.Cfg.Configuration();
             NHibernateSessionContext.Factory = cfg.Configure().BuildSessionFactory();
             NHibernateSessionContext.UnitOfWorkContext = new ThreadStaticUnitOfWorkContext();
             NHibernateSessionContext.UnitOfWorkContext.UnitOfWork = new UnitOfWork();
@@ -68,7 +68,7 @@ var cfg = new NHibernate.Cfg.Configuration();
 ## Usege UnitOfWork
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-using (var unitOfwork = provider.BeginUnitOfWork())
+			using (var unitOfwork = provider.BeginUnitOfWork())
             {
                 //Actions Repository
                 unitOfwork.Success();
