@@ -43,9 +43,9 @@ Set fields to NHibernateSessionContext
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			var cfg = new NHibernate.Cfg.Configuration();
-            NHibernateSessionContext.Factory = cfg.Configure().BuildSessionFactory();
-            NHibernateSessionContext.UnitOfWorkContext = new ThreadStaticUnitOfWorkContext();
-            NHibernateSessionContext.UnitOfWorkContext.UnitOfWork = new UnitOfWork();
+			NHibernateSessionContext.Factory = cfg.Configure().BuildSessionFactory();
+			NHibernateSessionContext.UnitOfWorkContext = new ThreadStaticUnitOfWorkContext();
+			NHibernateSessionContext.UnitOfWorkContext.UnitOfWork = new UnitOfWork();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -69,9 +69,9 @@ Set fields to NHibernateSessionContext
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			using (var unitOfwork = provider.BeginUnitOfWork())
-            {
-                //Actions Repository
-                unitOfwork.Success();
-            }
+			{
+				//Actions Repository
+				unitOfwork.Success();
+			}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
