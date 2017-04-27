@@ -13,7 +13,7 @@ after_build:
 - nuget pack src\YellowDrawer.Data.Common\YellowDrawer.Data.Common.nuspec  -Version "%APPVEYOR_BUILD_VERSION%" -OutputDirectory src\YellowDrawer.Data.Common
 
 before_test:
-- cmd: '"C:\Program Files (x86)\Microsoft SQL Server\120\DAC\bin\SqlPackage.exe" /Action:Publish /SourceFile:"test\DB\YellowDrawer.dacpac" /TargetDatabaseName:YellowDrawer' /TargetServerName:.
+- cmd: '"C:\Program Files (x86)\Microsoft SQL Server\120\DAC\bin\SqlPackage.exe" /Action:Publish /SourceFile:"test\DB\YellowDrawer.dacpac" /TargetDatabaseName:YellowDrawer /TargetServerName:.'
 
 image: Visual Studio 2017
 
